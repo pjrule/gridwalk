@@ -1,0 +1,30 @@
+{
+    "seed": 0,
+    "steps": 1000000,
+    "pop_col": "TOTPOP",
+    "plan_col": "CD_2011",
+    "proposal": {
+        "type": "uniform_flip",
+        "constraints": {
+            "population": [0.99, 1.01],
+            "cut_edges": [0, 10000]
+        }
+    },
+    "snapshot": {
+        "interval": 100000
+    },
+    "metrics": {
+        "seats": {
+            "type": "election",
+            "format": "hist",
+            "parties": {
+                "A": "DEM2008",
+                "B": "REP2008"
+            }
+        },
+        "cut_edges": {
+            "type": "cut_edges",
+            "format": "summary"
+        }
+    }
+}
