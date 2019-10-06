@@ -1,8 +1,11 @@
+#ifndef _STEP_H
+#define _STEP_H
+
 #include <vector>
 
 struct Step {
-	vector
-	int net_cut;
-	int weight;
+	const std::vector<int> nodes;
+	const std::vector<int> districts;
+	const int weight;
 }
-
+#endif

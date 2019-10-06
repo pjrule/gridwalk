@@ -6,10 +6,9 @@
 namespace gridwalk {
 class Chain {
 public:
-	Chain(gridwalk::Graph graph, gridwalk::Proposal proposal);
-	gridwalk::Step next();
+	Chain(Graph graph, Proposal proposal);
 private:
-        gridwalk::Graph graph;
-	gridwalk::Proposal proposal;
+        Graph graph;
+	Proposal proposal;
 }
 }
