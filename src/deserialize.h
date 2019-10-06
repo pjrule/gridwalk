@@ -8,8 +8,6 @@
 #include "graph.h"
 #include "chain.h"
 
-using namespace gridwalk::Graph, gridwalk::Chain;
-
 namespace gridwalk {
 class Deserializer {
 public:
