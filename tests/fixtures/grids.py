@@ -4,7 +4,7 @@ import click
 import networkx as nx
 from networkx.readwrite import json_graph
 
-N = 10
+N = 60
 SPLIT = 4
 
 @click.command()
@@ -26,7 +26,9 @@ def grids(horizontal_file, vertical_file):
     graph = nx.grid_graph(dim=[N, N])
     for node in graph.nodes:
         graph.nodes[node]['population'] = 1
-        graph.nodes[node]['district'] = node[0] + 1
+        graph.nodes[node]['district'] = (node[0] // 6) + 1
+        graph.nodes[node]['x'] = node[0] + 1
+        graph.nodes[node]['y'] = node[1] + 1
 
     horizontal_graph = graph.copy()
     vertical_graph = graph.copy()
